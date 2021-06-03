@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products - Beyond The Frames</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpeg" width="100px">
+    </div>
+    <nav>
+      <ul id="MenuItems">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Product</a></li>
+        <li><a href="#index.html">Feature</a></li>
+        <li><a href="#index.html">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <img src="images/cart-icon" width="30px" height="30px">
+    <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+  </div>
+  </div>
+
+<!------ single product details ------>
+
+<div class="small-container single-product">
+  <div class="row">
+    <div class="col-2">
+      <img src="images/ring3.jpeg" width="100%" id="ProductImg">
+      
+      <div class="small-img-row">
+        <div class="small-img-col">
+          <img src="images/ring2.jpeg" width="100%" class="small-img">
+        </div>
+        <div class="small-img-col">
+          <img src="images/ring3.jpeg" width="100%" class="small-img">
+        </div>
+        <div class="small-img-col">
+          <img src="images/ring1.jpeg" width="100%" class="small-img">
+        </div>
+      </div>
+
+    </div>
+    <div class="col-2">
+      <p>Home / Accessory</p>
+      <h1>Rings</h1>
+      <h1></h1>
+      <h1></h1>
+      <h4>Price: ₦2,000</h4>
+      <select>
+        <option>Select Color</option>
+        <option></option>
+        <option></option>
+        <option></option>
+      </select>
+      <a href="" class="btn">Shop Now</a>
+      <h3>Product Details <i class="fa fa-indent"></i></h3>
+      <br>
+      <p> Shop for our new rings collection exclusively at Beyond the frames</p>
+      <br>
+      <h3>Delivery Details <i class="fa fa-bus"></i></h3>
+      <br>
+      <p><strong>Mainland 800-1500, Mainland Extremes 2000-3000. <br>Island 1500-2000, Island Extremes 2500-3000.</strong></p>
+      <p><strong> Lagos delivery 1-2 days. <br>Outside Lagos 2-3 days.<br> And we deliver nationwide.</strong></p>
+    </div>
+  </div>
+</div>
+
+<!---- title ----->
+<div class="small-container">
+  <div class="row row-2">
+    <h2>Related Products</h2>
+  </div>
+</div>
+
+<!---- products ----->
+<div class="small-container">
+
+  
+  <div class="row">
+    <div class="col-4">
+      <img src="images/products/watches/watch5.jpeg">
+      <h4>G-SHOCK</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p>₦8,000</p>
+    </div>
+    <div class="col-4">
+      <img src="images/product-2.jpeg">
+      <h4>Versace Shades</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p>₦4,500</p>
+    </div>
+    <div class="col-4">
+      <img src="images/product-3.jpeg">
+      <h4>Rolex CuffLinks</h4>
+      <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <p>₦3,500</p>
+    </div>
+    
+  </div>
+</div>
+<!------ footer ----->
+<section id="contact">
+<div class="footer"> 
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3><strong>SHOP WITH US</strong></h3>
+        <div class="app-logo">
+          <a class="social-list__link" href="https://wa.me/2347087695677"><img src="images/instagram_PNG11.png"></a>
+          <a class="social-list__link" href="https://wa.me/2347087695677"><img src="images/4-2-whatsapp-transparent.png"></a>
+        </div>
+      </div>
+      <div class="footer-col-2">
+        <img src="images/logo.jpeg">
+        <h3>Opening Hours</h3>
+        <p>Moday to Saturday - 8am to 6pm</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-------js for toggle menu------>
+<script>
+  var MenuItems = document.getElementById("MenuItems");
+
+  MenuItems.style.maxHeight = "0px";
+
+  function menutoggle(){
+    if(MenuItems.style.maxHeight =="0px")
+    {
+      MenuItems.style.maxHeight ="200px";
+    }
+    else
+    {
+      MenuItems.style.maxHeight ="0px";
+    }
+  }
+</script>
+
+<!-------js for product gallery ------>
+
+<script>
+  var ProductImg = document.getElementById("ProductImg");
+  var SmallImg = document.getElementsByClassName("small-img");
+
+  SmallImg[0].onclick = function()
+  {
+    ProductImg.src = SmallImg[0].src;
+  }
+  SmallImg[1].onclick = function()
+  {
+    ProductImg.src = SmallImg[1].src;
+  }
+  SmallImg[2].onclick = function()
+  {
+    ProductImg.src = SmallImg[2].src;
+  }
+  SmallImg[3].onclick = function()
+  {
+    ProductImg.src = SmallImg[3].src;
+  }
+
+</script>
+
+
+</body>
+</html>
